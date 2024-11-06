@@ -136,3 +136,4 @@
 /Users/tivan/6005CEMCW/AmazingBargain/obj/Debug/net8.0/AmazingBargain.pdb
 /Users/tivan/6005CEMCW/AmazingBargain/obj/Debug/net8.0/AmazingBargain.genruntimeconfig.cache
 /Users/tivan/6005CEMCW/AmazingBargain/obj/Debug/net8.0/ref/AmazingBargain.dll
+/Users/tivan/6005CEMCW/AmazingBargain/obj/Debug/net8.0/AmazingBargain.sourcelink.json
