@@ -6,8 +6,14 @@
 
 <h1>Products</h1>
 <table>
+    <style>
+        <!-- prevents the issue where table heads touch each other making it hard to see items -->
+    th, td {
+        padding: 10px;
+    }
+    </style>
     <thead>
-        <tr>
+        <tr style="padding: 25px;">
             <th>Image</th>
             <th>Name</th>
             <th>Description</th>
@@ -18,7 +24,7 @@
     <tbody>
         @foreach (var product in Model.Products)
         {
-            <tr>
+            <tr style="padding: 25px;">
                 <td><img src="@product.ImageUrl" alt="@product.Name" style="width:100px;height:auto;" /></td>
                 <td>@product.Name</td>
                 <td>@product.Description</td>
