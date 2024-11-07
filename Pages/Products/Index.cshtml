@@ -14,7 +14,7 @@
     </style>
     <thead>
         <tr style="padding: 25px;">
-            <th>Image</th>
+            <th></th>
             <th>Name</th>
             <th>Description</th>
             <th>Price</th>
@@ -28,11 +28,11 @@
                 <td><img src="@product.ImageUrl" alt="@product.Name" style="width:100px;height:auto;" /></td>
                 <td>@product.Name</td>
                 <td>@product.Description</td>
-                <td>@product.Price</td>
+                <td>£@product.Price</td>
                 <td>
 
-                    <a asp-page="./Edit" asp-route-id="@product.Id">Edit</a>
-                    <a asp-page="./Delete" asp-route-id="@product.Id">Delete</a>
+                    <a asp-page="./Edit" class="btn btn-secondary" asp-route-id="@product.Id">Edit</a>
+                    <a asp-page="./Delete"  class="btn btn-danger"  asp-route-id="@product.Id">Delete</a>
                 </td>
             </tr>
         }
