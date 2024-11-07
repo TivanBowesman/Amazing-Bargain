@@ -48,10 +48,11 @@ namespace AmazingBargain.Pages.Products
                 return NotFound();
             }
 
+            // Update only the fields you want to edit
             productToUpdate.Name = Product.Name;
             productToUpdate.Description = Product.Description;
             productToUpdate.Price = Product.Price;
-
+            productToUpdate.ImageUrl = Product.ImageUrl; // Include ImageUrl
 
             await _context.SaveChangesAsync();
 
@@ -59,3 +60,4 @@ namespace AmazingBargain.Pages.Products
         }
     }
 }
+

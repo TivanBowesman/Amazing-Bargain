@@ -5,11 +5,10 @@
 }
 
 <h1>Products</h1>
-<a asp-page="./Create">Add New Product</a>
-
 <table>
     <thead>
         <tr>
+            <th>Image</th>
             <th>Name</th>
             <th>Description</th>
             <th>Price</th>
@@ -20,15 +19,20 @@
         @foreach (var product in Model.Products)
         {
             <tr>
+                <td><img src="@product.ImageUrl" alt="@product.Name" style="width:100px;height:auto;" /></td>
                 <td>@product.Name</td>
                 <td>@product.Description</td>
                 <td>@product.Price</td>
                 <td>
-                    <a asp-page="./Edit" asp-route-id="@product.Id">Edit</a> |
-                    <a asp-page="./Details" asp-route-id="@product.Id">Details</a> |
+
+                    <a asp-page="./Edit" asp-route-id="@product.Id">Edit</a>
                     <a asp-page="./Delete" asp-route-id="@product.Id">Delete</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+<!-- MAKE VISIBLE ONLY IS USER IS A SELLER -->
+<a asp-page="./Create" class="btn btn-secondary">Add your product to site</a>
+
